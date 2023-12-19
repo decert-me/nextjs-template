@@ -1,0 +1,35 @@
+#Footer{
+    height: auto;
+    padding: 0;
+    background-color: #000;
+    // 社交媒体跳转
+    p ,a, span{
+        color: #fff;
+    }
+    .footer-content{
+        padding: 44px 240px 54px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #1d1d1d;
+        .img{
+            margin-bottom: 12px;
+        }
+        .links{
+            display: flex;
+            gap: 32px;
+            a:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+    .footer-record{
+        padding: 41px 0 53px;
+        text-align: center;
+        font-weight: 400;
+        font-size: 16px;
+        a{
+            text-decoration: underline;
+        }
+    }
+}   

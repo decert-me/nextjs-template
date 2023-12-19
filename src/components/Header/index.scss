@@ -1,0 +1,67 @@
+#Header{
+    height: 82px;
+    padding: 0;
+    position: relative;
+    line-height: normal;
+    background-color: #ffffff00;
+
+
+    // 页面顶部背景
+    .custom-bg-round{
+        // width: calc(1400px / 1920px * 100%);
+        width: 1050px;
+        height: 400px;
+        background: #B27347;
+        border-radius: 50%;
+        opacity: 0.4;
+        filter: blur(70px);
+        position: absolute;
+        top: -300px;
+        left: calc((100% - 1050px) / 2);
+        z-index: 1;
+        // pointer-events: none;
+    }
+
+    .content{
+        width: 100%;
+        height: 82px;
+        padding-left: 150px;
+        padding-right: 130px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: fixed;
+        top: 0;
+        background-color: rgba(255,255,255,0.5) !important;
+        backdrop-filter: blur(42px);
+        z-index: 222;
+    }
+
+    // 头部左侧栏
+    .navbar-links{
+        display: flex;
+        align-items: center;
+        gap: 73px;
+        .logo{
+            height: 33.81px;
+        }
+        a{
+            font-size: 17px;
+            font-weight: 400;
+            &:hover{
+                font-weight: bold;
+                color: #8F5A35;
+            }
+        }
+    }
+
+    // 头部右侧栏
+    .navbar-btns{
+        .btn-connect{
+            width: 160px;
+            height: 40px;
+            border-radius: 10px;
+            font-size: 17px;
+        }
+    }
+}

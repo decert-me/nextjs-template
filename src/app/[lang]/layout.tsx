@@ -4,7 +4,13 @@ import { Inter } from "next/font/google";
 import "@/styles/globals.css";
 import "@/styles/globals.scss";
 import React from "react";
+import ContextProvider from "@/components/Context";
 import { Wagmi } from "./wagmi";
+import { Layout } from "antd";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import StyledComponentsRegistry from "@/lib/AntdRegistry";
+const { Content } = Layout;
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -29,7 +35,17 @@ export default function RootLayout({
             <body className={inter.className}>
                 <div>
                     <Wagmi>
-                        {children}
+                        <ContextProvider>
+                          <StyledComponentsRegistry>
+                            <Layout>
+                                <Header />
+                                <Content style={{ minHeight: "100vh" }}>
+                                    {children}
+                                </Content>
+                                <Footer />
+                            </Layout>
+                          </StyledComponentsRegistry>
+                        </ContextProvider>
                     </Wagmi>
                 </div>
             </body>

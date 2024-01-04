@@ -1,0 +1,6 @@
+node_modules
+.vscode/
+.next/
+dist/
+yarn.yaml
+CHANGELOG.md
